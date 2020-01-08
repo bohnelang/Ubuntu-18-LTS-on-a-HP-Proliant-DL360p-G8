@@ -23,7 +23,7 @@ While setting up Ubuntu on a HP Prolinat DL360p Gen8 we run intro some problems.
     vi /etc/X11/xorg.conf
     
     Edit this:
-    
+```    
 Section "ServerLayout"
     Identifier     "Layout0"
     Screen     	   0 "Screen0"
@@ -73,9 +73,10 @@ Section "Screen"
         Depth       24
     EndSubSection
 EndSection
-    
+```
+
  In the Xorg-log file you can see now this:
- 
+``` 
 [    35.789] (II) VESA(0): initializing int10
 [    35.789] (II) VESA(0): Primary V_BIOS segment is: 0xc000
 [    35.789] (II) VESA(0): VESA BIOS detected
@@ -86,13 +87,14 @@ EndSection
 [    35.789] (II) VESA(0): VESA VBE OEM Vendor: Matrox
 [    35.789] (II) VESA(0): VESA VBE OEM Product: MGA-G200
 [    35.789] (II) VESA(0): VESA VBE OEM Product Rev: 00
+```
 
 :-)
 
 ------
 
 Checking your hardware:
-    
+```    
 lshw -c video 
       *-display UNCLAIMED
        description: VGA compatible controller
@@ -108,4 +110,4 @@ lshw -c video
 
 lspci | grep -i VGA
 01:00.1 VGA compatible controller: Matrox Electronics Systems Ltd. MGA G200EH
-
+```
