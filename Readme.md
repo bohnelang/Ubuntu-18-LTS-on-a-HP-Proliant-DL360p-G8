@@ -5,11 +5,11 @@ While setting up Ubuntu on a HP Prolinat DL360p Gen8 we run intro some problems.
 
 2) The X-Server did not work with the VGA port of the server. We got only a swirling monitor display.
     The problem is that Ubuntu 18 LTS seems not to have the mga driver for Matrox graphic cards included.
-    We did not find the xserver-xorg-video-mga packague in the Ubuntu repository. Seems that it is only in Ubuntu 16 and Ubuntu 19.
+    We did not find the xserver-xorg-video-mga packague in the Ubuntu repository. Seems that the mag-X-server is only in Ubuntu 16 and Ubuntu 19.
     
-    Just disbale this and use a default driver:
+    Just disable this and use a default driver:
     
-    Linux modprobe the graphic driver mgag200 but the X-server canot use it.
+    Linux modprobe the graphic driver mgag200 but the X-server cannot use it.
     Thus do a 
        echo "blacklist  mgag200" > /etc/modprobe.d/matrox.conf 
     to disable the driver and reboot  the server (!).
