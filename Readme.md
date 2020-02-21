@@ -11,13 +11,15 @@ While setting up Ubuntu on a HP Prolinat DL360p Gen8 we run intro some problems.
     
     Linux modprobe the graphic driver mgag200 but the X-server cannot use it.
     Thus do a 
+    ```
        echo "blacklist  mgag200" > /etc/modprobe.d/matrox.conf 
+    ``` 
     to disable the driver and reboot  the server (!).
     
     Then set up a VESA X-server:
-    
+    ```
     cp /etc/X11/xorg.conf /etc/X11/xorg.conf.save
-    
+    ```
     Use an editor to do this - I use vi...
     
     vi /etc/X11/xorg.conf
