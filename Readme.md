@@ -1,9 +1,7 @@
 While setting up Ubuntu on a HP Prolinat DL360p Gen8 we run intro some problems. 
 
-1) During the install process we could not set  the IP number of server manualy. 
-     -> Thus we setup an Ubuntu 16 LTS and did a distribution upgrade. This works fine.
 
-2) The X-Server did not work with the VGA port of the server. We got only a swirling monitor display.
+ The X-Server did not work with the VGA port of the server. We got only a swirling monitor display.
     The problem is that Ubuntu 18 LTS seems not to have the mga driver for Matrox graphic cards included.
     We did not find the xserver-xorg-video-mga packague in the Ubuntu repository. Seems that the mag-X-server is only in Ubuntu 16 and Ubuntu 19.
     
